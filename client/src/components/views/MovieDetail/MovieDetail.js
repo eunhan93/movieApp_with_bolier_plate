@@ -44,7 +44,7 @@ function MovieDetail(props) {
             {/* body */}
             <div style={styles.body}>
                 <div style={styles.favorite}>
-                    <Favorite movieInfo={Movie} movieId = {MovieID} />
+                    <Favorite movieInfo={Movie} movieId = {movieID} />
                 </div>
 
                 {/* movie info */}
