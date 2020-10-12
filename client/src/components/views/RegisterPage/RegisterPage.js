@@ -2,8 +2,9 @@ import React from "react";
 import moment from "moment";
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { registerUser } from "../../../_actions/user_actions";
+import { registerUser } from "../../../_actions/user_action";
 import { useDispatch } from "react-redux";
+import { withRouter} from 'react-router-dom'
 
 import {
   Form,
@@ -200,4 +201,4 @@ function RegisterPage(props) {
 };
 
 
-export default RegisterPage
+export default withRouter(RegisterPage)

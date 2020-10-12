@@ -44,7 +44,7 @@ function MovieDetail(props) {
             {/* body */}
             <div style={styles.body}>
                 <div style={styles.favorite}>
-                    <Favorite movieInfo={Movie} movieId = {movieID} />
+                    <Favorite movieInfo={Movie} movieId = {movieId} userFrom = {localStorage.getItem('userId')} />
                 </div>
 
                 {/* movie info */}

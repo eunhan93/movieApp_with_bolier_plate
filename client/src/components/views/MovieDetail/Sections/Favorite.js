@@ -1,12 +1,15 @@
 import Axios from 'axios'
 import React, {useEffect} from 'react';
 
-function Favorite() {
-    let variables = {
-       userFrom,
-       movieId
-    }
+function Favorite(props) {
+    const movieId = props.movieId;
+    const userFrom = props.userFrom;
+    const movieTitle = props.movieTitle;
     useEffect(() => {
+        let variables = {
+            userFrom,
+            movieId
+         }
         Axios.post('/api/favorite/favoriteNumber', variables)
         .then(response => {
             if(response.data.success) {

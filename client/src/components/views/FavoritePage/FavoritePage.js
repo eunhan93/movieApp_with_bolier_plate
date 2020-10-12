@@ -3,6 +3,7 @@ import './favorite.css';
 import Axios from 'axios';
 import { Popover } from 'antd';
 import { IMAGE_BASE_URL } from '../../Config';
+import {withRouter} from 'react-router-dom'
 
 function FavoritePage() {
 
@@ -52,11 +53,7 @@ function FavoritePage() {
 
         const content = (
             <div>
-                {favorite.moviePost ?
-
-                    <img src={`${IMAGE_BASE_URL}w500${favorite.moviePost}`} /> : "no image"}
-
-                }
+                {favorite.moviePost ? <img src={`${IMAGE_BASE_URL}w500${favorite.moviePost}`} /> : "no image"}
             </div>
         )
 
@@ -100,4 +97,4 @@ function FavoritePage() {
     )
 }
 
-export default FavoritePage
+export default withRouter(FavoritePage)

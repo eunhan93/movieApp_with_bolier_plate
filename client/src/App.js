@@ -1,19 +1,20 @@
 import React, { Suspense } from 'react';
-import { Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Auth from "./hoc/auth";
 // pages for this product
-import LandingPage from "./component/views/LandingPage/LandingPage.js";
-import LoginPage from "./component/views/LoginPage/LoginPage.js";
-import RegisterPage from "./component/views/RegisterPage/RegisterPage.js";
-import NavBar from "./component/views/NavBar/NavBar";
-import Footer from "./component/views/Footer/Footer"
-import MovieDetail from "./component/views/MovieDetail/MovieDetail";
-import FavoritePage from "./component/views/FavoritePage/FavoritePage";
+import LandingPage from "./components/views/LandingPage/LandingPage.js";
+import LoginPage from "./components/views/LoginPage/LoginPage.js";
+import RegisterPage from "./components/views/RegisterPage/RegisterPage.js";
+import NavBar from "./components/views/NavBar/NavBar";
+import Footer from "./components/views/Footer/Footer"
+import MovieDetail from "./components/views/MovieDetail/MovieDetail";
+import FavoritePage from "./components/views/FavoritePage/FavoritePage";
 
 function App() {
   return (
     <Suspense fallback={(<div>Loading...</div>)}>
       <NavBar />
+      <Router>
       <div style={{ paddingTop: '69px', minHeight: 'calc(100vh - 80px)' }}>
         <Switch>
           <Route exact path="/" component={Auth(LandingPage, null)} />
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="/favorite" component={Auth(FavoritePage, true)} />
         </Switch>
       </div>
+      </Router>
       <Footer />
     </Suspense>
   );
