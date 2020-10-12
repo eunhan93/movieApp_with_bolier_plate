@@ -51,6 +51,7 @@ function LandingPage(props) {
                         <React.Fragment key={index}>
                             {/* Fragments는 DOM에 별도의 노드를 추가하지 않고 여러 자식을 그룹화 */}
                             <GridCards 
+                                landingPage
                                 image = {movie.poster_path ? `${IMAGE_BASE_URL}w500${movie.poster_path}` : null}
                                 movieId = {movie.id}
                                 movieName = {movie.original_title}
