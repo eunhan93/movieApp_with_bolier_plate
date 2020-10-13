@@ -1,7 +1,6 @@
 import React  from 'react';
 
 const MainImage = (props) => {
-    console.log(props);
     return (
         <div style={{background : `url(${props.image}) no-repeat center center / cover`,width : '100%', height : '500px', position: 'relative'}}>
             <div>

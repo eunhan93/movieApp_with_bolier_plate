@@ -25,7 +25,6 @@ function MovieDetail(props) {
         .then(response => response.json())
         .then(data => {
             setCasts(data.cast)
-            console.log(data.cast)
         });
     }, [])
 

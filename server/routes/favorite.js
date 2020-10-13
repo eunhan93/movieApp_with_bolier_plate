@@ -35,11 +35,6 @@ router.post('/favorited', (req, res) => {
 
 
 
-
-
-
-
-
 router.post('/removeFromFavorite', (req, res) => {
 
     Favorite.findOneAndDelete({ movieId: req.body.movieId, userFrom: req.body.userFrom })
