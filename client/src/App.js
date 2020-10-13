@@ -13,8 +13,8 @@ import FavoritePage from "./components/views/FavoritePage/FavoritePage";
 function App() {
   return (
     <Suspense fallback={(<div>Loading...</div>)}>
-      <NavBar />
       <Router>
+      <NavBar />
       <div style={{ paddingTop: '69px', minHeight: 'calc(100vh - 80px)' }}>
         <Switch>
           <Route exact path="/" component={Auth(LandingPage, null)} />
@@ -24,8 +24,8 @@ function App() {
           <Route exact path="/favorite" component={Auth(FavoritePage, true)} />
         </Switch>
       </div>
-      </Router>
       <Footer />
+      </Router>
     </Suspense>
   );
 }
